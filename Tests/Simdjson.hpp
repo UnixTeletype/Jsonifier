@@ -74,9 +74,7 @@ concept vector_subscriptable = requires(std::remove_cvref_t<value_type> value) {
 
 template<typename value_type>
 concept has_substr = requires(std::remove_cvref_t<value_type> value) {
-	{
-		value.substr(typename std::remove_cvref_t<value_type>::size_type{}, typename std::remove_cvref_t<value_type>::size_type{})
-	} -> std::same_as<std::remove_cvref_t<value_type>>;
+	{ value.substr(typename std::remove_cvref_t<value_type>::size_type{}, typename std::remove_cvref_t<value_type>::size_type{}) } -> std::same_as<std::remove_cvref_t<value_type>>;
 };
 
 template<typename value_type>
@@ -128,7 +126,6 @@ void throwError(auto error, std::source_location location = std::source_location
 	stream << "Error: " << error << std::endl;
 	stream << "Thrown from: " << location.file_name() << ", At Line: " << location.line() << std::endl;
 	std::cout << stream.str();
-	throw std::runtime_error{ stream.str() };
 }
 
 template<typename value_type> void getValue(value_type& data, simdjson::ondemand::value jsonData);
@@ -719,9 +716,17 @@ template<> void getValue(guild_data& msg, simdjson::ondemand::value jsonData) {
 	getValue(msg.stickers, obj, "stickers");
 	getValue(msg.features, obj, "features");
 	getValue(msg.channels, obj, "channels");
-	getValue(msg.roles, obj, "roles");
-	getValue(msg.splash, obj, "splash");
+	getValue(msg.members, obj, "members");
+	getValue(msg.threads, obj, "threads");
+	getValue(msg.region, obj, "region");
 	getValue(msg.banner, obj, "banner");
+	getValue(msg.splash, obj, "splash");
+	getValue(msg.owner, obj, "owner");
+	getValue(msg.large, obj, "large");
+	getValue(msg.flags, obj, "flags");
+	getValue(msg.roles, obj, "roles");
+	getValue(msg.lazy, obj, "lazy");
+	getValue(msg.nsfw, obj, "nsfw");
 	getValue(msg.icon, obj, "icon");
 	getValue(msg.name, obj, "name");
 	getValue(msg.id, obj, "id");

@@ -122,14 +122,14 @@ namespace jsonifier_internal {
 
 	template<jsonifier::serialize_options options, jsonifier::concepts::bool_t value_type, typename size_collect_context_type>
 	struct size_collect_impl<options, value_type, size_collect_context_type> {
-		JSONIFIER_ALWAYS_INLINE constexpr static size_t impl() noexcept {
+		constexpr static size_t impl() noexcept {
 			return 5;
 		}
 	};
 
 	template<jsonifier::serialize_options options, jsonifier::concepts::num_t value_type, typename size_collect_context_type>
 	struct size_collect_impl<options, value_type, size_collect_context_type> {
-		JSONIFIER_ALWAYS_INLINE constexpr static size_t impl() noexcept {
+		constexpr static size_t impl() noexcept {
 			return 128;
 		}
 	};
@@ -150,14 +150,14 @@ namespace jsonifier_internal {
 
 	template<jsonifier::serialize_options options, jsonifier::concepts::always_null_t value_type, typename size_collect_context_type>
 	struct size_collect_impl<options, value_type, size_collect_context_type> {
-		JSONIFIER_ALWAYS_INLINE constexpr static size_t impl() noexcept {
+		constexpr static size_t impl() noexcept {
 			return 4;
 		}
 	};
 
 	template<jsonifier::serialize_options options, jsonifier::concepts::char_t value_type, typename size_collect_context_type>
 	struct size_collect_impl<options, value_type, size_collect_context_type> {
-		JSONIFIER_ALWAYS_INLINE constexpr static size_t impl() noexcept {
+		constexpr static size_t impl() noexcept {
 			return 3;
 		}
 	};
