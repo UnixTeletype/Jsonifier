@@ -1,4 +1,5 @@
 # Jsonifier
+#### Jsonifier is fully [RFC8259](8259) compliant.
 ![Commit Activity](https://img.shields.io/github/commit-activity/y/realtimechris/jsonifier?color=999EE0&label=Commits&style=plastic)
 ![Lines of Code](https://tokei.rs/b1/github/RealTimeChris/Jsonifier-Code-Only?color=light-blue&label=Lines%20Of%20Code%20&style=plastic)
 
