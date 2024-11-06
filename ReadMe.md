@@ -2,7 +2,7 @@
 ![Commit Activity](https://img.shields.io/github/commit-activity/y/realtimechris/jsonifier?color=999EE0&label=Commits&style=plastic)
 ![Lines of Code](https://tokei.rs/b1/github/RealTimeChris/Jsonifier-Code-Only?color=light-blue&label=Lines%20Of%20Code%20&style=plastic)
 
-#### Jsonifier is fully [RFC8259](https://datatracker.ietf.org/doc/html/rfc8259) compliant.
+#### Jsonifier is fully [RFC8259](https://datatracker.ietf.org/doc/html/rfc8259) compliant, and makes use of many modern C++20 features.
 
 ### A few classes for validating, serializing, parsing, prettifying, and minifying objects into/from JSON strings - very rapidly.
 ### ***It achieves this through the usage of [simd-instructions](https://github.com/RealTimeChris/Jsonifier/tree/main/Include/jsonifier/ISA) as well as compile-time [hash-maps](https://github.com/RealTimeChris/Jsonifier/blob/main/Include/jsonifier/HashMap.hpp) for the keys of the data being parsed.***
